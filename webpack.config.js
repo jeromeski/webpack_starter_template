@@ -1,16 +1,17 @@
 const path = require("path");
-const TerserPlugin = require('terser-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWepackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: "bundle[contenthash].js",
+    filename: "bundle.[contenthash].js",
     // must be absolute path
     path: path.resolve(__dirname, "./dist"),
     // specify the base path for all the assets/ generic files are within your app is in dist folder
-    publicPath: "dist/"
+    publicPath: ""
   },
   mode: "none",
   module: {
@@ -23,7 +24,7 @@ module.exports = {
       {
         // checks if the filename contains css
         test: /\.css$/,
-        use: [ MiniCssExtractPlugin.loader, "css-loader"]
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
       },
       {
         // checks if the filename contains scss
@@ -49,20 +50,22 @@ module.exports = {
         }
       }
     ]
-  }, plugins: [
+  },
+  plugins: [
     new TerserPlugin(),
     // extract all css from js bundle
     new MiniCssExtractPlugin({
-      filename: 'styles[contenthash].css'
+      filename: "styles.[contenthash].css"
     }),
     new CleanWebpackPlugin({
       // removing old dist bundle and css files
       cleanOnceBeforeBuildPatterns: [
         // remove all files including subdirectories in dist
-        '**/*',
+        "**/*",
         // remove all files including subdir inside build - absolute path
-        path.join(process.cwd(), 'build/**/*')
+        path.join(process.cwd(), "build/**/*")
       ]
-    })
+    }),
+    new HtmlWepackPlugin()
   ]
 };
