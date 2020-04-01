@@ -5,7 +5,9 @@ module.exports = {
   output: {
     filename: 'bundle.js',
                   // must be absolute path
-    path: path.resolve(__dirname, './dist' )
+    path: path.resolve(__dirname, './dist' ),
+    // specify the base path for all the assets/ generic files are within your app is in dist folder
+    publicPath: 'dist/'
   },
   mode: 'none',
   module: {
