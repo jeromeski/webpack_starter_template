@@ -108,8 +108,8 @@ helloWorldButton.render();
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 const hello = () => {
-  console.log('Hello World')
-}
+  console.log('Hello World');
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (hello);
 
@@ -130,11 +130,11 @@ class HelloWorldButton {
     button.classList.add('hello-world-button');
     const body = document.querySelector('body');
     button.onclick = () => {
-      const p  = document.createElement('p');
+      const p = document.createElement('p');
       p.classList.add('hello-world-text');
       p.innerHTML = 'Hello World';
-      body.appendChild(p)
-    }
+      body.appendChild(p);
+    };
     body.appendChild(button);
   }
 }
