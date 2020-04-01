@@ -48,6 +48,11 @@ module.exports = {
             plugins: ["transform-class-properties"]
           }
         }
+      },
+      {
+        // checks if the filename contains hbs
+        test: /\.hbs$/,
+        use: ["handlebars-loader"]
       }
     ]
   },
@@ -67,10 +72,12 @@ module.exports = {
       ]
     }),
     new HtmlWepackPlugin({
-      title: 'Hello World',
+      title: "Hello World",
       // filename: 'subfolder/custom_filename.html',
       meta: {
-        description: 'Some description'
+        title: "Hello world",
+        template: "src/index.hbs",
+        description: "Some description"
       }
     })
   ]
