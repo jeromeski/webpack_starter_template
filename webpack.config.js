@@ -18,6 +18,14 @@ module.exports = {
         use: [
           'file-loader'
         ]
+      },
+      {
+        // checks if the filename contains png or jpg
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
       }
     ]
   }
