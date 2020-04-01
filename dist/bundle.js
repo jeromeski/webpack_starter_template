@@ -119,8 +119,8 @@ const hello = () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _hello_world_button_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/* harmony import */ var _hello_world_button_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_hello_world_button_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _hello_world_button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _hello_world_button_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_hello_world_button_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
 class HelloWorldButton {
@@ -450,7 +450,7 @@ module.exports = function (list, options) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(6);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".hello-world-button {\r\n  background: #428BCA;\r\n    color: #fff;\r\n    font-family: Sans-serif;\r\n    font-size: 20px;\r\n    height: 60px;\r\n    width: 150px;\r\n    line-height: 60px;\r\n    text-align: center;\r\n    border: 0;\r\n    transition: all 0.3s ease 0s;\r\n  \r\n}\r\n\r\n.hello-world-button:hover {\r\n  background: #3071A9;\r\n  font-weight: 400;\r\n\r\n}\r\n\r\n.hello-world-text {\r\n  color: blue;\r\n  font-size: 1.25rem;\r\n  font-weight: bolder;\r\n  margin-left: 1rem;\r\n}", ""]);
+exports.push([module.i, ".hello-world-button {\n  background: #428BCA;\n  color: white;\n  font-family: Sans-serif;\n  font-size: 20px;\n  height: 60px;\n  width: 150px;\n  line-height: 60px;\n  text-align: center;\n  border: 0;\n  transition: all 0.3s ease 0s; }\n\n.hello-world-button:hover {\n  background: #3071A9;\n  font-weight: 400; }\n\n.hello-world-text {\n  color: blue;\n  font-size: 1.25rem;\n  font-weight: bolder;\n  margin-left: 1rem; }\n", ""]);
 // Exports
 module.exports = exports;
 

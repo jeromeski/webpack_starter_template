@@ -20,11 +20,23 @@ module.exports = {
         ]
       },
       {
-        // checks if the filename contains png or jpg
+        // checks if the filename contains css
         test: /\.css$/,
         use: [
           'style-loader',
           'css-loader'
+        ]
+      },
+      {
+        // checks if the filename contains scss
+        test: /\.scss$/,
+        use: [
+          // last will convert js rep to style text inside html page and put css into it
+          'style-loader',
+          // 2nd convert css to js representation
+          'css-loader',
+          // first convert sass to css
+          'sass-loader'
         ]
       }
     ]

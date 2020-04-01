@@ -1,6 +1,12 @@
+$font-size: 20px;
+$button-bg-color-1: #428BCA;
+$button-bg-color-2: #3071A9;
+$button-font-color: white;
+
+
 .hello-world-button {
   background: #428BCA;
-    color: #fff;
+    color: $button-font-color;
     font-family: Sans-serif;
     font-size: 20px;
     height: 60px;
@@ -13,7 +19,7 @@
 }
 
 .hello-world-button:hover {
-  background: #3071A9;
+  background: $button-bg-color-2;
   font-weight: 400;
 
 }
