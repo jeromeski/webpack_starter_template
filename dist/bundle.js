@@ -91,9 +91,12 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _hello_world__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _add_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+
 
 
 Object(_hello_world__WEBPACK_IMPORTED_MODULE_0__["default"])();
+Object(_add_image__WEBPACK_IMPORTED_MODULE_1__["default"])();
 
 /***/ }),
 /* 1 */
@@ -106,6 +109,34 @@ const hello = () => {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (hello);
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _kiwi_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+
+
+const addImage = () => {
+  const img = document.createElement('img');
+  img.alt = 'Kiwi';
+  img.width = 300;
+  img.src = _kiwi_jpg__WEBPACK_IMPORTED_MODULE_0__["default"];
+  const body = document.querySelector('body');
+  body.appendChild(img);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (addImage);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "23de234a71129d9c860b2eecff6e31b1.jpg");
 
 /***/ })
 /******/ ]);

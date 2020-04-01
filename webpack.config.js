@@ -7,5 +7,16 @@ module.exports = {
                   // must be absolute path
     path: path.resolve(__dirname, './dist' )
   },
-  mode: 'none'
-}
+  mode: 'none',
+  module: {
+    rules: [
+      {
+        // checks if the filename contains png or jpg
+        test: /\.(png|jpg)$/,
+        use: [
+          'file-loader'
+        ]
+      }
+    ]
+  }
+};
