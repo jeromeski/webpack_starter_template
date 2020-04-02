@@ -4,9 +4,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWepackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    'main': "./src/index.js",
+    'kiwi': "./src/components/kiwi.js"
+  },
   output: {
-    filename: "bundle.[contenthash].js",
+    filename: "[name].[contenthash].js",
     // must be absolute path
     path: path.resolve(__dirname, "./dist"),
     // specify the base path for all the assets/ generic files are within your app is in dist folder
@@ -58,7 +61,7 @@ module.exports = {
   plugins: [
     // extract all css from js bundle
     new MiniCssExtractPlugin({
-      filename: "styles.[contenthash].css"
+      filename: "[name].[contenthash].css"
     }),
     new CleanWebpackPlugin({
       // removing old dist bundle and css files
