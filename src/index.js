@@ -10,6 +10,8 @@ helloWorldButton.render();
 
 const heading = new Heading();
 heading.render();
+const heading2 = new Heading();
+heading2.render();
 
 if (process.env.NODE_ENV === 'production') {
   console.log( 
