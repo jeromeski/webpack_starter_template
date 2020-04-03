@@ -16,6 +16,12 @@ module.exports = {
     publicPath: ""
   },
   mode: "production",
+  // to extract lodash and place it in to a separate bundle.
+  optimization: {
+    splitChunks: {
+      chunks: "all"
+    }
+  },
   module: {
     rules: [
       {
@@ -76,7 +82,7 @@ module.exports = {
       title: "Hello World",
       // filename: 'subfolder/custom_filename.html',
       filename: "hello-world.html",
-      chunks: ["hello-world"],
+      chunks: ["hello-world","vendors~hello-world~kiwi"],
       template: "src/page-template.hbs",
       description: "Some description"
     }),
@@ -84,7 +90,7 @@ module.exports = {
       title: "Kiwi",
       // filename: 'subfolder/custom_filename.html',
       filename: "kiwi.html",
-      chunks: ["kiwi"],
+      chunks: ["kiwi", "vendors~hello-world~kiwi"],
       template: "src/page-template.hbs",
       description: "Some description"
     })

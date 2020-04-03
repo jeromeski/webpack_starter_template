@@ -2,10 +2,10 @@ import './heading.scss';
 
 class Heading {
   
-  render() {
+  render(text) {
     const h1 = document.createElement("h1");
     h1.classList.add("heading-text");
-    h1.innerHTML = "Some text heading here";
+    h1.innerHTML = text;
     const body = document.querySelector("body");
     body.appendChild(h1);
   }
