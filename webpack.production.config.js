@@ -5,8 +5,8 @@ const HtmlWepackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    'main': "./src/index.js",
-    'kiwi': "./src/components/kiwi.js"
+    "hello-world": "./src/hello-world.js",
+    "kiwi": "./src/kiwi.js"
   },
   output: {
     filename: "[name].[contenthash].js",
@@ -54,7 +54,7 @@ module.exports = {
       {
         // checks if the filename contains hbs
         test: /\.hbs$/,
-        use: ["handlebars-loader"]
+        use: [ "handlebars-loader"]
       }
     ]
   },
@@ -75,11 +75,18 @@ module.exports = {
     new HtmlWepackPlugin({
       title: "Hello World",
       // filename: 'subfolder/custom_filename.html',
-      meta: {
-        title: "Hello world",
-        template: "src/index.hbs",
-        description: "Some description"
-      }
+      filename: "hello-world.html",
+      chunks: ["hello-world"],
+      template: "src/page-template.hbs",
+      description: "Some description"
+    }),
+    new HtmlWepackPlugin({
+      title: "Kiwi",
+      // filename: 'subfolder/custom_filename.html',
+      filename: "kiwi.html",
+      chunks: ["kiwi"],
+      template: "src/page-template.hbs",
+      description: "Some description"
     })
   ]
 };
